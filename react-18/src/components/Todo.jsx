@@ -11,7 +11,7 @@ function Todo(props) {
 
   const closeModalHandler = () => {
     setModalIsOpen(!modalIsOpen);
-  }
+  };
 
   return (
     <div className="p-4 flex justify-between items-center bg-gray-600 w-full rounded my-2">
@@ -25,7 +25,9 @@ function Todo(props) {
           Delete
         </button>
       </div>
-      {modalIsOpen && <Modal />}
+      {modalIsOpen && (
+        <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler} />
+      )}
       {modalIsOpen && <Backdrop onCancel={closeModalHandler} />}
     </div>
   );

@@ -1,20 +1,18 @@
-
-import Todo from "./components/Todo";
+import { Route, Routes } from "react-router";
+import AllMeetupsPage from "./pages/AllMeetups.jsx";
+import FavoritesPage from "./pages/Favorites.jsx";
+import NewMeetupPage from "./pages/NewMeetup.jsx";
+import Layout from "./components/layout/Layout.jsx";
 
 function App() {
   return (
-    <>
-      <header className="bg-gray-800 text-white text-center p-4">
-        <h1 className="text-2xl font-bold">My Todos</h1>
-      </header>
-
-      <main className="p-4 flex flex-col items-center">
-        <Todo title="Learn React." />
-        <Todo title="Buy milk."/>
-        <Todo title="Kill Hitler." />
-        <Todo title="Explore universe." />
-      </main>
-    </>
+    <Layout>
+      <Routes>
+        <Route index element={<AllMeetupsPage />} />
+        <Route path="/new-meetup" element={<NewMeetupPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+      </Routes>
+    </Layout>
   );
 }
 
