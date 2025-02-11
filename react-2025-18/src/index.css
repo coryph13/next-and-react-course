@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 body {
-  background-color: #ccc;
+  background-color: #584197;
+  color: #e6ddf9;
+  margin: 0;
 }
-
+/* 
 h1 {
   font-weight: 700;
   font-size: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* text-align: center; */
-}
+} */

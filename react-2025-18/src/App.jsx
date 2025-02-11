@@ -1,18 +1,22 @@
 import { Route, Routes } from "react-router";
-import AllMeetupsPage from "./pages/AllMeetups.jsx";
-import FavoritesPage from "./pages/Favorites.jsx";
-import NewMeetupPage from "./pages/NewMeetup.jsx";
-import Layout from "./components/layout/Layout.jsx";
+import Post from "./components/post/Post";
+import NewPost from "./routes/NewPost";
+import RootLayout from "./routes/RootLayout";
+import Posts from "./routes/Posts";
 
 function App() {
+
+
   return (
-    <Layout>
-      <Routes>
-        <Route index element={<AllMeetupsPage />} />
-        <Route path="/new-meetup" element={<NewMeetupPage />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
-      </Routes>
-    </Layout>
+    <>
+      <RootLayout>
+        <Routes>
+          <Route index element={<Posts />} />
+          <Route path={`/create`} element={<NewPost />} />
+          <Route path={`/:id`} element={<Post />} />
+        </Routes>
+      </RootLayout>
+    </>
   );
 }
 
