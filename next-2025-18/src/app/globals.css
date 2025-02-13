@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root, :root.light {
-  --background: #ffffff;
+:root,
+:root.light {
+  --background: #ddd8e4;
   --foreground: #171717;
 }
 
 :root.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: linear-gradient(180deg, #232029, #231e2d);
+  --foreground: #ddd8e4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: linear-gradient(180deg, #232029, #231e2d);
+    --foreground: #ddd8e4;
   }
 }
 
@@ -23,4 +24,54 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html {
+  font-family: 'Open Sans' sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  color: #ddd8e4;
+}
+
+main {
+  text-align: center;
+  margin: 5rem auto;
+}
+
+main img {
+  margin-top: 3rem;
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  filter: drop-shadow(0 0 4px #f6c363);
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 3rem auto;
+  color: #ede9f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+p a {
+  color: #f4c33d;
+  text-decoration: none;
+  padding-bottom: .05rem;
+  border-bottom: 2px solid #f4c33d;
+}
+
+p a:hover,
+p a:active {
+  color: #bd3df4;
+  border-color: #bd3df4;
 }
